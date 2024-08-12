@@ -5,10 +5,14 @@ and provide endpoints to access this data. External API should only be called wh
 available in database of the application. Additionally, migrations for the database (Postgres or 
 MySql) should be created separately using a migration tool. Finally, endpoints should be covered by
 tests.
+
 • GET /fx: Returns fx rates from USD to EUR, GBP, JPY, CZK. Response should contain 
 date of conversion, source currency, target currency, exchange rate. It should be possible to 
 specify target currency.
+
+
 • GET /fx/{targetCurrency}: Returns 3 latest fx rates in form of time series from 
 USD to target currency with a step of 1 day.
+
 External API to use:
 https://api.frankfurter.app/2024-03-18?to=USD
